@@ -9,12 +9,13 @@ pipeline {
     }
    
     stages {
-         stage (' change to root')
+        stage ('change to root') {
            steps {
                script{
                    sh " sudo su -"
                }
            }
+        }
          stage('Logging into AWS ECR') {
             steps {
                 script {
